@@ -22,14 +22,39 @@ class MainActivity : AppCompatActivity() {
             val result: Int = rollDice()
             displayResult(result)
         }
-        findViewById<Button>(R.id.buttonD4).setOnClickListener { diceSize = 4 }
-        findViewById<Button>(R.id.buttonD6).setOnClickListener { diceSize = 6 }
-        findViewById<Button>(R.id.buttonD8).setOnClickListener { diceSize = 8 }
-        findViewById<Button>(R.id.buttonD10).setOnClickListener { diceSize = 10 }
-        findViewById<Button>(R.id.buttonD12).setOnClickListener { diceSize = 12 }
-        findViewById<Button>(R.id.buttonD20).setOnClickListener { diceSize = 20 }
-        findViewById<Button>(R.id.buttonD100).setOnClickListener { diceSize = 100 }
+        initializeDiceMenu()
         showDiceImage(findViewById(R.id.imageView))
+    }
+
+    private fun initializeDiceMenu() {
+        findViewById<Button>(R.id.buttonD4).setOnClickListener {
+            diceSize = 4
+            showDiceImage(findViewById(R.id.imageView))
+        }
+        findViewById<Button>(R.id.buttonD6).setOnClickListener {
+            diceSize = 6
+            showDiceImage(findViewById(R.id.imageView))
+        }
+        findViewById<Button>(R.id.buttonD8).setOnClickListener {
+            diceSize = 8
+            showDiceImage(findViewById(R.id.imageView))
+        }
+        findViewById<Button>(R.id.buttonD10).setOnClickListener {
+            diceSize = 10
+            showDiceImage(findViewById(R.id.imageView))
+        }
+        findViewById<Button>(R.id.buttonD12).setOnClickListener {
+            diceSize = 12
+            showDiceImage(findViewById(R.id.imageView))
+        }
+        findViewById<Button>(R.id.buttonD20).setOnClickListener {
+            diceSize = 20
+            showDiceImage(findViewById(R.id.imageView))
+        }
+        findViewById<Button>(R.id.buttonD100).setOnClickListener {
+            diceSize = 100
+            showDiceImage(findViewById(R.id.imageView))
+        }
     }
 
     private fun rollDice(): Int {
